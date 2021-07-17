@@ -30,12 +30,12 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/JumlahSiswaYangMelanjutkanSekolah_1.js"></script>
-        <script src="data/FasilitasPendidikanDemak_3.js"></script>
+        <script src="data/Demak_1.js"></script>
+        <script src="data/FasilitasPendidikan_2.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-7.189976830829536,110.2574326090736],[-6.734120213357124,111.03804147126834]]);
+        }).fitBounds([[-7.1412674784302625,110.28707296552545],[-6.685457780012726,111.22346089245316]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -55,7 +55,7 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
-        function pop_JumlahSiswaYangMelanjutkanSekolah_1(feature, layer) {
+        function pop_Demak_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">KECAMATAN</th>\
@@ -66,8 +66,8 @@
                         <td>' + (feature.properties['SD ke SMP'] !== null ? autolinker.link(feature.properties['SD ke SMP'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">SMP ke SMA</th>\
-                        <td>' + (feature.properties['SMP ke SMA'] !== null ? autolinker.link(feature.properties['SMP ke SMA'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">SMP Ke SMA</th>\
+                        <td>' + (feature.properties['SMP Ke SMA'] !== null ? autolinker.link(feature.properties['SMP Ke SMA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">SMP ke SMK</th>\
@@ -81,10 +81,10 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_JumlahSiswaYangMelanjutkanSekolah_1_0(feature) {
-            if (feature.properties['Jumlah'] >= 0.000000 && feature.properties['Jumlah'] <= 2500.000000 ) {
+        function style_Demak_1_0(feature) {
+            if (feature.properties['Jumlah'] >= 1017.000000 && feature.properties['Jumlah'] <= 3164.250000 ) {
                 return {
-                pane: 'pane_JumlahSiswaYangMelanjutkanSekolah_1',
+                pane: 'pane_Demak_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -93,13 +93,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,255,255,1.0)',
+                fillColor: 'rgba(247,252,245,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Jumlah'] >= 2500.000000 && feature.properties['Jumlah'] <= 5000.000000 ) {
+            if (feature.properties['Jumlah'] >= 3164.250000 && feature.properties['Jumlah'] <= 5311.500000 ) {
                 return {
-                pane: 'pane_JumlahSiswaYangMelanjutkanSekolah_1',
+                pane: 'pane_Demak_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -108,13 +108,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,213,170,1.0)',
+                fillColor: 'rgba(178,224,171,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Jumlah'] >= 5000.000000 && feature.properties['Jumlah'] <= 7500.000000 ) {
+            if (feature.properties['Jumlah'] >= 5311.500000 && feature.properties['Jumlah'] <= 7458.750000 ) {
                 return {
-                pane: 'pane_JumlahSiswaYangMelanjutkanSekolah_1',
+                pane: 'pane_Demak_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -123,13 +123,13 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,170,85,1.0)',
+                fillColor: 'rgba(61,167,90,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['Jumlah'] >= 7500.000000 && feature.properties['Jumlah'] <= 10000.000000 ) {
+            if (feature.properties['Jumlah'] >= 7458.750000 && feature.properties['Jumlah'] <= 9606.000000 ) {
                 return {
-                pane: 'pane_JumlahSiswaYangMelanjutkanSekolah_1',
+                pane: 'pane_Demak_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -138,95 +138,70 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,127,0,1.0)',
+                fillColor: 'rgba(0,68,27,1.0)',
                 interactive: true,
             }
             }
         }
-        map.createPane('pane_JumlahSiswaYangMelanjutkanSekolah_1');
-        map.getPane('pane_JumlahSiswaYangMelanjutkanSekolah_1').style.zIndex = 401;
-        map.getPane('pane_JumlahSiswaYangMelanjutkanSekolah_1').style['mix-blend-mode'] = 'normal';
-        var layer_JumlahSiswaYangMelanjutkanSekolah_1 = new L.geoJson(json_JumlahSiswaYangMelanjutkanSekolah_1, {
+        map.createPane('pane_Demak_1');
+        map.getPane('pane_Demak_1').style.zIndex = 401;
+        map.getPane('pane_Demak_1').style['mix-blend-mode'] = 'normal';
+        var layer_Demak_1 = new L.geoJson(json_Demak_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_JumlahSiswaYangMelanjutkanSekolah_1',
-            layerName: 'layer_JumlahSiswaYangMelanjutkanSekolah_1',
-            pane: 'pane_JumlahSiswaYangMelanjutkanSekolah_1',
-            onEachFeature: pop_JumlahSiswaYangMelanjutkanSekolah_1,
-            style: style_JumlahSiswaYangMelanjutkanSekolah_1_0,
+            dataVar: 'json_Demak_1',
+            layerName: 'layer_Demak_1',
+            pane: 'pane_Demak_1',
+            onEachFeature: pop_Demak_1,
+            style: style_Demak_1_0,
         });
-        bounds_group.addLayer(layer_JumlahSiswaYangMelanjutkanSekolah_1);
-        map.addLayer(layer_JumlahSiswaYangMelanjutkanSekolah_1);
-        map.createPane('pane_OpenStreetMap_2');
-        map.getPane('pane_OpenStreetMap_2').style.zIndex = 402;
-        var layer_OpenStreetMap_2 = L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            pane: 'pane_OpenStreetMap_2',
-            opacity: 1.0,
-            attribution: '',
-            minZoom: 1,
-            maxZoom: 28,
-            minNativeZoom: 0,
-            maxNativeZoom: 19
-        });
-        layer_OpenStreetMap_2;
-        map.addLayer(layer_OpenStreetMap_2);
-        function pop_FasilitasPendidikanDemak_3(feature, layer) {
+        bounds_group.addLayer(layer_Demak_1);
+        map.addLayer(layer_Demak_1);
+        function pop_FasilitasPendidikan_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">NAMOBJ</th>\
-                        <td>' + (feature.properties['NAMOBJ'] !== null ? autolinker.link(feature.properties['NAMOBJ'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['NAMOBJ'] !== null ? autolinker.link(feature.properties['NAMOBJ'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">LUAS</th>\
-                        <td>' + (feature.properties['LUAS'] !== null ? autolinker.link(feature.properties['LUAS'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['LUAS'] !== null ? autolinker.link(feature.properties['LUAS'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">KATPDK</th>\
-                        <td>' + (feature.properties['KATPDK'] !== null ? autolinker.link(feature.properties['KATPDK'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['KATPDK'] !== null ? autolinker.link(feature.properties['KATPDK'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">JLPDDK</th>\
-                        <td>' + (feature.properties['JLPDDK'] !== null ? autolinker.link(feature.properties['JLPDDK'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['JLPDDK'] !== null ? autolinker.link(feature.properties['JLPDDK'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">FGGPDK</th>\
-                        <td>' + (feature.properties['FGGPDK'] !== null ? autolinker.link(feature.properties['FGGPDK'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['FGGPDK'] !== null ? autolinker.link(feature.properties['FGGPDK'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">REMARK</th>\
-                        <td>' + (feature.properties['REMARK'] !== null ? autolinker.link(feature.properties['REMARK'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['REMARK'] !== null ? autolinker.link(feature.properties['REMARK'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">FCODE</th>\
-                        <td>' + (feature.properties['FCODE'] !== null ? autolinker.link(feature.properties['FCODE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['FCODE'] !== null ? autolinker.link(feature.properties['FCODE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">SRS_ID</th>\
-                        <td>' + (feature.properties['SRS_ID'] !== null ? autolinker.link(feature.properties['SRS_ID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['SRS_ID'] !== null ? autolinker.link(feature.properties['SRS_ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">LCODE</th>\
-                        <td>' + (feature.properties['LCODE'] !== null ? autolinker.link(feature.properties['LCODE'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['LCODE'] !== null ? autolinker.link(feature.properties['LCODE'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">METADATA</th>\
-                        <td>' + (feature.properties['METADATA'] !== null ? autolinker.link(feature.properties['METADATA'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['METADATA'] !== null ? autolinker.link(feature.properties['METADATA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">JJGPDF</th>\
-                        <td>' + (feature.properties['JJGPDF'] !== null ? autolinker.link(feature.properties['JJGPDF'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['JJGPDF'] !== null ? autolinker.link(feature.properties['JJGPDF'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">JNSPDL</th>\
-                        <td>' + (feature.properties['JNSPDL'] !== null ? autolinker.link(feature.properties['JNSPDL'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['JNSPDL'] !== null ? autolinker.link(feature.properties['JNSPDL'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_FasilitasPendidikanDemak_3_0() {
+        function style_FasilitasPendidikan_2_0() {
             return {
-                pane: 'pane_FasilitasPendidikanDemak_3',
+                pane: 'pane_FasilitasPendidikan_2',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -236,55 +211,55 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(227,26,28,1.0)',
+                fillColor: 'rgba(213,180,60,1.0)',
                 interactive: true,
             }
         }
-        map.createPane('pane_FasilitasPendidikanDemak_3');
-        map.getPane('pane_FasilitasPendidikanDemak_3').style.zIndex = 403;
-        map.getPane('pane_FasilitasPendidikanDemak_3').style['mix-blend-mode'] = 'normal';
-        var layer_FasilitasPendidikanDemak_3 = new L.geoJson(json_FasilitasPendidikanDemak_3, {
+        map.createPane('pane_FasilitasPendidikan_2');
+        map.getPane('pane_FasilitasPendidikan_2').style.zIndex = 402;
+        map.getPane('pane_FasilitasPendidikan_2').style['mix-blend-mode'] = 'normal';
+        var layer_FasilitasPendidikan_2 = new L.geoJson(json_FasilitasPendidikan_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_FasilitasPendidikanDemak_3',
-            layerName: 'layer_FasilitasPendidikanDemak_3',
-            pane: 'pane_FasilitasPendidikanDemak_3',
-            onEachFeature: pop_FasilitasPendidikanDemak_3,
+            dataVar: 'json_FasilitasPendidikan_2',
+            layerName: 'layer_FasilitasPendidikan_2',
+            pane: 'pane_FasilitasPendidikan_2',
+            onEachFeature: pop_FasilitasPendidikan_2,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_FasilitasPendidikanDemak_3_0(feature));
+                return L.circleMarker(latlng, style_FasilitasPendidikan_2_0(feature));
             },
         });
-        bounds_group.addLayer(layer_FasilitasPendidikanDemak_3);
-        map.addLayer(layer_FasilitasPendidikanDemak_3);
+        bounds_group.addLayer(layer_FasilitasPendidikan_2);
+        map.addLayer(layer_FasilitasPendidikan_2);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/FasilitasPendidikanDemak_3.png" /> Fasilitas Pendidikan Demak': layer_FasilitasPendidikanDemak_3,"OpenStreetMap": layer_OpenStreetMap_2,'Jumlah Siswa Yang Melanjutkan Sekolah<br /><table><tr><td style="text-align: center;"><img src="legend/JumlahSiswaYangMelanjutkanSekolah_1_Kurang0.png" /></td><td>Kurang</td></tr><tr><td style="text-align: center;"><img src="legend/JumlahSiswaYangMelanjutkanSekolah_1_Cukup1.png" /></td><td>Cukup</td></tr><tr><td style="text-align: center;"><img src="legend/JumlahSiswaYangMelanjutkanSekolah_1_Banyak2.png" /></td><td>Banyak</td></tr><tr><td style="text-align: center;"><img src="legend/JumlahSiswaYangMelanjutkanSekolah_1_SangatBanyak3.png" /></td><td>Sangat Banyak</td></tr></table>': layer_JumlahSiswaYangMelanjutkanSekolah_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/FasilitasPendidikan_2.png" /> Fasilitas Pendidikan': layer_FasilitasPendidikan_2,'Demak<br /><table><tr><td style="text-align: center;"><img src="legend/Demak_1_Sedikit0.png" /></td><td>Sedikit</td></tr><tr><td style="text-align: center;"><img src="legend/Demak_1_Cukup1.png" /></td><td>Cukup</td></tr><tr><td style="text-align: center;"><img src="legend/Demak_1_Banyak2.png" /></td><td>Banyak</td></tr><tr><td style="text-align: center;"><img src="legend/Demak_1_BanyakSekali3.png" /></td><td>Banyak Sekali</td></tr></table>': layer_Demak_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         var i = 0;
-        layer_JumlahSiswaYangMelanjutkanSekolah_1.eachLayer(function(layer) {
+        layer_Demak_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['KECAMATAN'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'.SF NS Text\', sans-serif;">' + layer.feature.properties['KECAMATAN']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_JumlahSiswaYangMelanjutkanSekolah_1'});
+            layer.bindTooltip((layer.feature.properties['KECAMATAN'] !== null?String('<div style="color: #000000; font-size: 10pt; font-family: \'.SF NS Text\', sans-serif;">' + layer.feature.properties['KECAMATAN']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Demak_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_JumlahSiswaYangMelanjutkanSekolah_1]);
+        resetLabels([layer_Demak_1]);
         map.on("zoomend", function(){
-            resetLabels([layer_JumlahSiswaYangMelanjutkanSekolah_1]);
+            resetLabels([layer_Demak_1]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_JumlahSiswaYangMelanjutkanSekolah_1]);
+            resetLabels([layer_Demak_1]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_JumlahSiswaYangMelanjutkanSekolah_1]);
+            resetLabels([layer_Demak_1]);
         });
         </script>
     </body>

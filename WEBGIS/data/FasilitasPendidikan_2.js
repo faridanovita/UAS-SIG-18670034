@@ -1,6 +1,6 @@
-var json_FasilitasPendidikanDemak_3 = {
+var json_FasilitasPendidikan_2 = {
 "type": "FeatureCollection",
-"name": "FasilitasPendidikanDemak_3",
+"name": "FasilitasPendidikan_2",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "NAMOBJ": null, "LUAS": 0.0, "KATPDK": "0", "JLPDDK": "0", "FGGPDK": "999", "REMARK": "Pendidikan\/Penelitian Lainnya", "FCODE": null, "SRS_ID": null, "LCODE": "GE0020", "METADATA": null, "JJGPDF": "999", "JNSPDL": "0" }, "geometry": { "type": "Point", "coordinates": [ 110.79514467000007, -6.875980953999942 ] } },
